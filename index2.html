@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let student = {
+            firstName: "John",
+            lastName: "Smith",
+            averageScore: 4,
+            getFullName() {
+                return Firstname: ${this.firstName}  +   Lastname: ${this.lastName}  + isGrantHolder();
+            },
+            isGrantHolder() {
+                if(this.averageScore >= 4) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+        function Aspirant(dissertationTopic, isDissertationComplete) {
+            this.dissertationTopic = dissertationTopic;
+            this.isDissertationComplete = isDissertationComplete;
+            this.__proto__ = student;
+            this.isGrantHolder = function() {
+                if(this.averageScore >= 4.5) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+        let aspirant = new Aspirant("Zoo", true);
+
+        for(let key in aspirant) {
+            console.log(key);
+        }
+
+        console.log(student.isGrantHolder());
+        console.log(aspirant.isGrantHolder());
+
+
+    </script>
+</body>
+</html>
